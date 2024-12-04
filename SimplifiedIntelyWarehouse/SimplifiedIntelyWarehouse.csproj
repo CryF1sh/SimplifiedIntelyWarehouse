@@ -15,10 +15,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="API\Controllers\" />
     <Folder Include="Core\Entities\" />
     <Folder Include="Application\" />
-    <Folder Include="Infrastructure\" />
-    <Folder Include="API\" />
+    <Folder Include="Core\Interfaces\" />
+    <Folder Include="Core\Services\" />
+    <Folder Include="Infrastructure\Data\" />
+    <Folder Include="Infrastructure\Services\" />
     <Folder Include="Tests\" />
   </ItemGroup>
 
