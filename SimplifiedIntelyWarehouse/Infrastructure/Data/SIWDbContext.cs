@@ -1,12 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SimplifiedIntelyWarehouse.Core.Entities;
 
 namespace SimplifiedIntelyWarehouse.Infrastructure.Data
 {
     public class SIWDbContext : DbContext
     {
-        //public DbSet<Product> Products { get; set; }
-        //public DbSet<Stock> Stocks { get; set; }
-        //public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Stock> Stocks { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
 
         public SIWDbContext(DbContextOptions<SIWDbContext> options)
             : base(options)
