@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <Folder Include="API\Controllers\" />
-    <Folder Include="Core\Entities\" />
     <Folder Include="Application\" />
     <Folder Include="Core\Interfaces\" />
     <Folder Include="Core\Services\" />
