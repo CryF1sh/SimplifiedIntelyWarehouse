@@ -7,7 +7,7 @@
     {
         Incoming,   //
         Outgoing,   // 
-        Return,     /
-        Adjustment
+        Return,     //
+        Adjustment  //
     }
 }

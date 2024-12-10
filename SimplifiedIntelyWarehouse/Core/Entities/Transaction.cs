@@ -13,6 +13,7 @@ namespace SimplifiedIntelyWarehouse.Core.Entities
         public TransactionType Type { get; set; }
         public int Quantity { get; set; }
         public decimal Price { get; set; }
+        public Status Status { get; set; }
         public DateTime TransactionDate { get; set; }
         public string Notes { get; set; }
     }
