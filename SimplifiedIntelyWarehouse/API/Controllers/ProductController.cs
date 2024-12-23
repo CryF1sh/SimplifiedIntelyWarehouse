@@ -25,7 +25,7 @@ namespace SimplifiedIntelyWarehouse.API.Controllers
 
 
         // GET: api/Product/{id}
-        [HttpGet("{id}")]
+        [HttpGet("byId/{id}")]
         public async Task<ActionResult<Product>> GetProductById(int id)
         {
             var product = await _context.Products.FindAsync(id);
@@ -36,10 +36,10 @@ namespace SimplifiedIntelyWarehouse.API.Controllers
         }
 
         // GET: api/Product/{name}
-        [HttpGet("{name}")]
+        [HttpGet("byName/{name}")]
         public async Task<ActionResult<Product>> GetProductByName(string name)
         {
-            var product = await _context.Products.FindAsync(name);
+            var product = await _context.Products.FirstOrDefaultAsync(p => p.Name == name);
 
             if (product == null) return NotFound();
 
@@ -47,10 +47,10 @@ namespace SimplifiedIntelyWarehouse.API.Controllers
         }
 
         // GET: api/Product/{sku}
-        [HttpGet("{sku}")]
+        [HttpGet("bySKU/{sku}")]
         public async Task<ActionResult<Product>> GetProductBySKU(string sku)
         {
-            var product = await _context.Products.FindAsync(sku);
+            var product = await _context.Products.FirstOrDefaultAsync(p => p.SKU == sku);
 
             if (product == null) return NotFound();
 
